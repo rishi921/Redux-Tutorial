@@ -6,11 +6,12 @@ export default function Counter() {
     const dispatch = useDispatch();
 
     return <>
+        <div>
+            <h1>Counter : {counter}</h1>
 
-        <h1>Counter : {counter}</h1>
-        <button className="btn btn-primary m-2 p-3" onClick={() => dispatch(increment())}>Increment</button>
+            <button className="btn btn-success m-2 p-1" onClick={() => dispatch(increment())}>Increment (+)</button>
 
-        <button className="btn btn-secondary m-2 p-3" onClick={() => dispatch(decrement())}>Decrement</button>
-
+            <button className="btn btn-danger m-2 p-1" onClick={() => dispatch(decrement())}>Decrement (-)</button>
+        </div>
     </>
 }

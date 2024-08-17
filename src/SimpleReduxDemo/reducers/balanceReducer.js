@@ -1,9 +1,14 @@
 import { WITHDRAW, DEPOSIT } from "../actions/actionTypes";
 
-const balanceReducer = (state = 'out', action) => {
+const balanceReducer = (state = '0', action) => {
     switch (action.type) {
-        case WITHDRAW: return "In";
-        case DEPOSIT: return "Out";
+        
+        case DEPOSIT:
+            return Number(state) + Number(action.payload);
+
+        case WITHDRAW:
+            return Number(state) - Number(action.payload);
+
         default: return state;
     }
 }

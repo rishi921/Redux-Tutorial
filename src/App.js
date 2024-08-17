@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import { Provider } from 'react-redux';
 import Counter from './SimpleReduxDemo/components/Counter';
 import myStore from './SimpleReduxDemo/store/reduxStore';
